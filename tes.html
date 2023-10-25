@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Radio Streaming</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #333;
+      }
+
+      select {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #3498db;
+        border-radius: 5px;
+        background-color: #fff;
+        outline: none;
+      }
+
+      select:hover {
+        border-color: #2980b9;
+      }
+
+      audio {
+        width: 100%;
+      }
+
+      button {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Aplikasi Radio Streaming</h1>
+
+    <select id="radioSelect" title="Pilih stasiun radio">
+      <option value="radio1">Suara Surabaya</option>
+      <option value="radio2">Zeno FM</option>
+      <option value="radio3">Delta FM</option>
+      <option value="radio4">Prambors FM</option>
+      <option value="radio5">I-Radio Jakarta</option>
+    </select>
+
+    <audio id="radioPlayer" controls>
+      <source id="radioSource" src="" type="audio/mpeg" />
+    </audio>
+
+    <button id="startButton">Start</button>
+    <button id="pauseButton">Pause</button>
+
+    <script>
+      const radioPlayer = document.getElementById("radioPlayer");
+      const radioSelect = document.getElementById("radioSelect");
+      const radioSource = document.getElementById("radioSource");
+      const startButton = document.getElementById("startButton");
+      const pauseButton = document.getElementById("pauseButton");
+
+      const radioStreams = {
+        radio1: "https://c5.siar.us/proxy/ssfm/stream",
+        radio2:
+          "https://stream-154.zeno.fm/av6xzace6ehvv?zs=38TJvYxaRPuRKElp0w8UdA",
+        radio3: "https://stream.cloudmu.id/listen/delta_fm/stream?icy=http",
+        radio4:
+          "https://22243.live.streamtheworld.com/PRAMBORS_FM_SC?dist=pramborsweb&pname=tdwidgets",
+        radio5:
+          "https://n03.radiojar.com/4ywdgup3bnzuv?rj-tok=AAABi2b2p4gA_GfD3clkUolvyg&rj-ttl=5",
+        // Tambahkan URL stasiun radio lainnya di sini
+      };
+
+      startButton.addEventListener("click", () => {
+        const selectedRadio = radioSelect.value;
+        radioSource.src = radioStreams[selectedRadio];
+        radioPlayer.load();
+        radioPlayer.play();
+      });
+
+      pauseButton.addEventListener("click", () => {
+        radioPlayer.pause();
+      });
+    </script>
+  </body>
+</html>
