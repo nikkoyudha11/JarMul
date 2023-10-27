@@ -35,7 +35,20 @@
       select:hover {
         border-color: #2980b9;
       }
+      select option {
+        background-color: grey; /* Warna latar belakang elemen option sebelum diklik (contoh: merah) */
+        color: #fff; /* Warna teks pada elemen option sebelum diklik */
+      }
 
+      select option:checked {
+        background-color: #333333; /* Warna latar belakang elemen option setelah diklik (contoh: hijau) */
+        color: #fff; /* Warna teks pada elemen option setelah diklik */
+      }
+
+      option {
+        background-color: grey; /* Ubah warna latar belakang elemen option menjadi merah (contoh) */
+        color: #fff; /* Warna teks pada elemen option */
+      }
       audio {
         width: 25%;
       }
@@ -54,6 +67,7 @@
       button:hover {
         background-color: #2980b9;
       }
+      
     </style>
   </head>
   <body>
