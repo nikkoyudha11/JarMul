@@ -1,0 +1,65 @@
+body {
+    font-family: "Arial", sans-serif;
+    background: url('https://i.pinimg.com/736x/e3/99/e8/e399e8026411f078a697c16415c48c79.jpg') no-repeat center center fixed;
+    background-size: 70%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 28px;
+    color: white;
+  }
+
+  p {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 250px;
+    border: 3px solid #3498db;
+    border-radius: 5px;
+    background-color: #fff;
+    outline: none;
+  }
+  /* select:hover {
+    border-color: #2980b9;
+  } */
+
+  /* select option {
+    background-color: grey; /* Warna latar belakang elemen option sebelum diklik (contoh: merah) */
+    /* color: #fff; Warna teks pada elemen option sebelum diklik */
+  /* } 
+
+  select option:checked {
+    background-color: #333333; /* Warna latar belakang elemen option setelah diklik (contoh: hijau) */
+    /* color: #fff; Warna teks pada elemen option setelah diklik */
+  /* } */
+
+  /* option { */
+    /* background-color: grey; Ubah warna latar belakang elemen option menjadi merah (contoh) */
+    /* color: #fff; Warna teks pada elemen option */
+  /* } */
+
+  audio {
+    width: 25%;
+  }
+
+  button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
